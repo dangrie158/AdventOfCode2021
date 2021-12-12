@@ -87,7 +87,10 @@ def add_part2_description(file, part2_description):
 
 
 def main():
-    current_day = date.today().day
+    if len(sys.argv) > 1:
+        current_day = int(sys.argv[1])
+    else:
+        current_day = date.today().day
     notebook = Path(f"{current_day:02d}.ipynb")
 
     try:
